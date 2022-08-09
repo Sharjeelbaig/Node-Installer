@@ -7,15 +7,16 @@ wget -P "/usr/share/figlet/" https://shazi-cloud.web.app/figlet-fonts/smbraille.
 wget -P "/usr/share/figlet/" https://shazi-cloud.web.app/figlet-fonts/smblock.tlf
 wget -P "/usr/share/figlet/" https://shazi-cloud.web.app/figlet-fonts/Shimrod.flf
 clear
+#end of dependencies installations
+
 #intro
 sudo apt install figlet
 figlet -f slant "Shazi"
 echo By Sharjeel Baig
 #End of intro
 
-
-#end of dependencies installations
-
+#main
+sudo npm install nodejs
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -32,6 +33,7 @@ fi
 source ~/.bashrc
 command -v nvm
 nvm install v18.3.0
+#end of main
 
 #outro
 figlet -f Shimrod "Follow My Github:"
