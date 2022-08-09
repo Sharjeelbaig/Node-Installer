@@ -16,6 +16,8 @@ echo By Sharjeel Baig
 #End of intro
 
 #main
+echo "enter verson of npm to install (e.g 18.3.0)":
+read $version
 sudo npm install nodejs
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -32,7 +34,7 @@ if [ -d "$HOME/.nvm" ]; then
 fi
 source ~/.bashrc
 command -v nvm
-nvm install v18.3.0
+nvm install v$version
 #end of main
 
 #outro
